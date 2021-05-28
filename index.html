@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splitter</title>
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div id="main">
+        <h1 style="font-weight: 400;">SPLITTER</h1>
+        <br/>
+        <div id="group">
+            <button id="newgroup" data-bs-toggle="modal" data-bs-target="#exampleModal">Create New Group</button>
+            <div>Select Group :</div>
+            <form>
+            <input list="groups" name="browser" id="datagroup" >
+        </form>
+        </div>
+        <br/>
+        <div id="expense">
+
+        </div>
+        <!-- <div id="expense">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div> -->
+        
+        
+        
+    </div>
+
+</body>
+<datalist id="groups">
+</datalist>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Create new group</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div><b>Group name: </b><input type="text"></div><br />
+                <div><span>Member 1: </span><input type="text"></div><br />
+                <div><span>Member 2: </span><input type="text"><br /></div><br/>
+                <button>Add member</button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Add expenseModal -->
+<div class="modal fade" id="expenseModal" tabindex="-1" aria-labelledby="" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">New Expense</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div><b>Purpose : </b><input type="text"></div><br />
+                <div><b>INR : </b><input type="text"></div><br />
+                <div>Paid by :</div>
+                <input list="paidlist" name="paid" id="paidby" ><br/>
+                <div>Paid for :</div>
+                <div></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+<datalist id="paidlist">
+</datalist>
+<script src="./index.js"></script>
+</html>
